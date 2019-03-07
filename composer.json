@@ -1,0 +1,33 @@
+{
+    "name": "Mayank/TodoTask",
+    "description": "A Sample package for managing todo task with category",
+    "license": "MIT",
+    "authors": [],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^5.4.0|^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.*",
+        "mockery/mockery": ">=0.7.2"
+    },
+    "extra": {
+        "laravel": {
+            "providers": ["Mayank\\TodoTask\\TodoTaskServiceProvider"],
+            "aliases": {
+                "Todotask": "Mayank\\TodoTask\\TodoTaskFacade"
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": { 
+            "Mayank\\TodoTask\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": { }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    }
+}
